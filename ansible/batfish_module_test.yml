@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  
+  tasks:
+    - name: test
+      batfish_firewall:
+        network_name: network-name
+        snapshot_name: what_ever_you_want
+        snapshot_path: your_running_config_file_path
+        src: 
+          - 0.0.0.0
+          - 2.2.2.2
+        dest: 
+          - 2.2.2.2
+          - 1.1.1.1
+        acl_name: ACL_NAME
+        node: 'cisco_asa'
+        condition: permit
+      register: result
+
+    - name:
+      debug:
+        msg: "{{ result }}"
