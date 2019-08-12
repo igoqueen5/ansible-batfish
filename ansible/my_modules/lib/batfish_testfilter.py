@@ -65,12 +65,7 @@ def main():
         snapshot_name = dict(required=True),
         snapshot_path = dict(required=True),
         network_name = dict(required=True),
-        src = dict(required=True),
-        dest = dict(required=False),
-        application = dict(required=False),
-        condition = dict(required=True),
-        node = dict(required=True),
-        acl_name = dict(required=True)
+        csv_file_path = dict(required=True)
     ),
     add_file_common_args=True,
     supports_check_mode=False,

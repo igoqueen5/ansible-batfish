@@ -1,0 +1,4 @@
+test_id,src,dest,acl_name,node,application,intend_condition
+1,1.1.1.1,,SPLIT-ACL,before_summary_asa,dns,permit
+2,10.22.0.0,255.255.255.0,SPLIT-ACL,before_summary_asa,dns,permit
+3,10.25.0.0,255.255.255.0,SPLIT-ACL,before_summary_asa,dns,permit
